@@ -1,0 +1,14 @@
+h1 BOOKS
+form(action="/books/search" method="GET")
+  input(type="text", name="q", value=question)
+  button Search
+a(href="/books/create") NewBook
+ul
+  each book in books
+    li
+      span= book.title
+      span &nbsp
+      a(href="/books/" + book.id + "/update") Edit
+      span &nbsp
+      a(href="/books/" + book.id + "/delete") Delete
+      
